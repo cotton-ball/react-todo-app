@@ -43,14 +43,12 @@ export default class App extends Component{
             <h1> 할 일 목록 </h1>
           </div>
           {this.todoData.map(data=>(
-            <div style={this.getStyle()}>
+            <div style={this.getStyle()}key={data.id}>
             <input type="checkbox" defaultCheckbox ={false} />
               {data.title}
               <button style={this.btnStyle}> x </button>
           </div>
           ))}
-          
-
         </div>
       </div>
     )
